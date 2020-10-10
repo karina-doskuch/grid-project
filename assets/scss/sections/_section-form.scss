@@ -1,0 +1,45 @@
+
+.subscribe {
+    background-color: #2D3651;
+    font-size: 20px;
+    padding: 5px;
+
+}
+
+.subscribe-form {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas: "fb1 fb2 fb3";
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.subscribe-form>input:nth-child(1) {
+    grid-area: fb1;
+}
+
+.subscribe-form>input:nth-child(2) {
+    grid-area: fb2;
+}
+
+.subscribe-form>a:nth-child(3) {
+    grid-area: fb3;
+}
+
+.subscribe-form_input {
+    display: block;
+    padding: 10px 15px;
+    font-size: 1.125rem;
+    height: 50px;
+    text-align: center;
+    transition: background-color 0.5s;
+    letter-spacing: 0.1em;
+    background-color: #2D3651;
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+.subscribe-form_input:nth-child(1)::placeholder {
+    color: white;
+}
