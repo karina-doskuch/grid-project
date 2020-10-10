@@ -24,6 +24,10 @@ h1 {
     @media (max-width: 768px) {
       font-size: 30px;
     }
+
+    @media (max-width: 576px) {
+          font-size: 10px;
+      }
 }
 
 a {

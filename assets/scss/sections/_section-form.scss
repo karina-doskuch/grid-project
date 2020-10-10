@@ -4,40 +4,46 @@
     font-size: 20px;
     padding: 5px;
 
+    &-form {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-areas: "fb1 fb2 fb3";
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "fb1 fb1""fb2 fb3";
+            }
+
+            @media (max-width: 576px) {
+                grid-template-columns: 1fr;
+                grid-template-areas: "fb1" "fb2" "fb3";
+                }
+
+        &_input {
+            display: block;
+            padding: 10px 15px;
+            font-size: 1.125rem;
+            height: 50px;
+            text-align: center;
+            transition: background-color 0.5s;
+            letter-spacing: 0.1em;
+            background-color: #2D3651;
+            opacity: 0.8;
+      }
+  } 
 }
 
-.subscribe-form {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-areas: "fb1 fb2 fb3";
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.subscribe-form>input:nth-child(1) {
-    grid-area: fb1;
-}
-
-.subscribe-form>input:nth-child(2) {
-    grid-area: fb2;
-}
+@for $i from 1 through 2 {
+    .subscribe-form>input:nth-child(#{$i}) {
+        grid-area: fb#{$i};
+    }
 
 .subscribe-form>a:nth-child(3) {
     grid-area: fb3;
-}
-
-.subscribe-form_input {
-    display: block;
-    padding: 10px 15px;
-    font-size: 1.125rem;
-    height: 50px;
-    text-align: center;
-    transition: background-color 0.5s;
-    letter-spacing: 0.1em;
-    background-color: #2D3651;
-    opacity: 0.8;
-    margin-right: 10px;
 }
 
 .subscribe-form_input:nth-child(1)::placeholder {
