@@ -798,6 +798,15 @@ a {
 
 .about-image {
   grid-area: rim;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-image img {
   width: 271px;
   height: 488px;
 }
@@ -835,7 +844,6 @@ a {
   background-color: #2D3651;
   opacity: 0.8;
 }
-
 
 .subscribe-form > input:nth-child(1) {
   grid-area: fb1;
@@ -882,8 +890,60 @@ a {
 
 .posts-item {
   background-color: #EEEEEE;
-  position: relative;
   text-align: center;
+}
+
+.posts-item_image__container {
+  position: relative;
+  overflow: hidden;
+  height: 183px;
+}
+
+.posts-item_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.posts-item_title {
+  width: 100%;
+  padding: 25px;
+  color: #637588;
+  font-weight: bold;
+}
+
+.posts-item_text {
+  color: #637588;
+  margin: 30px 20px 30px 20px;
+}
+
+.posts-button {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.posts-item:hover .posts-item_image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.posts-item:hover {
+  background-color: lightgray;
 }
 
 .posts-item:nth-of-type(1) {
@@ -908,43 +968,6 @@ a {
 
 .posts-item:nth-of-type(6) {
   grid-area: p6;
-}
-
-.posts-item_image {
-  position: absolute;
-  height: 183px;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-
-.posts-header {
-  color: #2d3651;
-}
-
-.posts-item_title {
-  width: 100%;
-  margin: 183px 0 0 0;
-  padding: 25px;
-  color: #637588;
-  font-weight: bold;
-}
-
-.posts-item_text {
-  color: #637588;
-  margin: 30px 20px 30px 20px;
-}
-
-.posts-button {
-  padding-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .footer {
@@ -1011,14 +1034,24 @@ a {
 
 @media (max-width: 992px) {
   h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .header-content_title {
     margin: 0 0 43px;
   }
+  .header-content_buttons .btn {
+    min-width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
   .skills_container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+  }
+  .about {
+    padding: 50px 20px 87px;
   }
   .posts_container {
     grid-template-columns: repeat(3, 1fr);
@@ -1028,10 +1061,18 @@ a {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .header-content_title {
     margin: 0 0 33px;
+  }
+  .header-content_buttons .btn {
+    min-width: 170px;
+    height: 40px;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
   }
   .skills_container {
     grid-template-columns: repeat(2, 1fr);
@@ -1052,6 +1093,24 @@ a {
     min-width: auto;
     width: 100%;
   }
+  .header-content_title {
+    margin: 0 0 13px;
+  }
+  .header-content_buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-content_buttons .btn:first-of-type {
+    margin-right: 0;
+  }
+  .header-content_buttons .btn:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
   .skills {
     padding: 20px;
   }
@@ -1067,29 +1126,15 @@ a {
   .about_container {
     grid-template-areas: "rtt rtt" "rtx  rtx" "rim rim";
   }
-  .about-title {
-    grid-area: rtt;
-    font-size: 2.5rem;
-    color: #2d3651;
-  }
-  .about-text {
-    grid-area: rtx;
-  }
   .about-line {
     display: none;
-  }
-  h1 {
-    font-size: 10px;
-  }
-  .header-content_title {
-    margin: 0 0 13px;
   }
   .subscribe-form {
     grid-template-columns: 1fr;
     grid-template-areas: "fb1" "fb2" "fb3";
   }
   .posts_container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
   }
 }

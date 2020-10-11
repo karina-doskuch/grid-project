@@ -20,23 +20,3 @@
 
 @import "footer";
 
-@media (max-width: 992px) {
-    .posts_container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "p1 p1 p2""p3 p4 p4""p5 p6 p6";
-    }
-}
-
-@media (max-width: 768px) {
-    .posts_container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "p1 p2""p3 p4""p5 p6";
-   }
-}
-
-@media (max-width: 576px) {
-    .posts_container {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: "p1""p2""p3""p4""p5""p6";
-    }
-}
