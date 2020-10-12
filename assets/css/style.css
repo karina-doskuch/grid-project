@@ -456,7 +456,7 @@ template {
   display: none;
 }
 
-.header-menu_container, .header-content_container {
+.header-menu_container, .header-content_container, .about_container, .subscribe-form, .posts-header, .posts_container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -769,7 +769,7 @@ a {
 
 .about {
   background-color: #E5E5E5;
-  padding: 100px 150px 87px;
+  padding: 100px 20px 87px;
 }
 
 .about_container {
@@ -814,12 +814,13 @@ a {
 .subscribe {
   background-color: #2D3651;
   font-size: 20px;
-  padding: 5px;
+  font-family: "Roboto", sans-serif;
+  padding: 25px;
 }
 
 .subscribe-form {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "fb1 fb2 fb3";
   grid-gap: 10px;
   -webkit-box-pack: center;
@@ -831,30 +832,29 @@ a {
   height: 100%;
 }
 
+.subscribe-form > button:nth-child(3) {
+  grid-area: fb3;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.subscribe-form > button:nth-child(3):hover {
+  border: 2px solid white;
+}
+
 .subscribe-form_input {
   display: block;
   padding: 10px 15px;
   font-size: 1.125rem;
-  height: 50px;
-  text-align: center;
+  height: 60px;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   background-color: #2D3651;
   opacity: 0.8;
-}
-
-.subscribe-form > input:nth-child(1) {
-  grid-area: fb1;
-}
-
-.subscribe-form > input:nth-child(2) {
-  grid-area: fb2;
-}
-
-.subscribe-form > a:nth-child(3) {
-  grid-area: fb3;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .subscribe-form_input:nth-child(1)::-webkit-input-placeholder {
@@ -877,8 +877,28 @@ a {
   color: white;
 }
 
+.subscribe-form_input:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-bottom: 2px solid white;
+}
+
+.subscribe-form > input:nth-child(1) {
+  grid-area: fb1;
+}
+
+.subscribe-form > input:nth-child(2) {
+  grid-area: fb2;
+}
+
 .posts {
-  padding: 10px 10px 40px;
+  padding: 100px 10px 40px;
+}
+
+.posts-header {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  color: #2d3651;
 }
 
 .posts_container {
@@ -896,7 +916,7 @@ a {
 .posts-item_image__container {
   position: relative;
   overflow: hidden;
-  height: 183px;
+  height: 300px;
 }
 
 .posts-item_image {

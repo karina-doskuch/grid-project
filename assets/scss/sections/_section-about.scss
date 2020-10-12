@@ -1,6 +1,6 @@
 .about {
     background-color: #E5E5E5;
-    padding: 100px 150px 87px;
+    padding: 100px 20px 87px;
 
 
     @media (max-width: 992px) {
@@ -21,6 +21,7 @@
     }
 
     &_container {
+        @extend %container;
         display: grid;
         grid-template-areas: "att att aim" "atx aln aim";
     }
