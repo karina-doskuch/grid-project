@@ -456,7 +456,7 @@ template {
   display: none;
 }
 
-.header-menu_container, .header-content_container, .about_container, .subscribe-form, .posts-header, .posts_container {
+.header-menu_container, .header-content_container, .about_container, .subscribe-form, .posts-header, .posts_container, .footer_container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -579,6 +579,19 @@ a {
 
 .header-navbar_btn {
   display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.header-navbar_btn-row {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
 }
 
 .header-navbar_list {
@@ -891,7 +904,7 @@ a {
 }
 
 .posts {
-  padding: 100px 10px 40px;
+  padding: 100px 10px;
 }
 
 .posts-header {
@@ -991,22 +1004,10 @@ a {
 }
 
 .footer {
-  width: 100%;
-  height: 100px;
-}
-
-.footer_container {
+  padding: 50px 20px 70px;
   background-color: #2d3651;
-  width: 100%;
-  height: 100px;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
+  display: block;
 }
 
 .footer-line {
@@ -1016,27 +1017,41 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px 0 20px;
 }
 
 .footer-line_element {
-  background-color: lightgrey;
+  background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
-  width: 100px;
+  width: 75px;
 }
 
 .footer-text {
-  text-align: center;
+  margin-right: -0.5em;
+  letter-spacing: 0.33em;
 }
 
 .footer-text:last-of-type {
-  color: white;
+  color: #e5e5e5;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .footer-icon {
-  background: #2d3651;
-  border-radius: 1px;
-  padding: 10px 0;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   text-align: center;
+}
+
+.footer-icon .fab {
+  font-size: 2.25rem;
 }
 
 .footer-icon a {
@@ -1082,6 +1097,18 @@ a {
 @media (max-width: 768px) {
   h1 {
     font-size: 1.875rem;
+  }
+  .header-navbar_list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    text-align: right;
+    display: block;
+    background-color: rgba(68, 89, 110, 0.8);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   .header-content_title {
     margin: 0 0 33px;
