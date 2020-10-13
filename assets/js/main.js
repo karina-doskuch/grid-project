@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-  $('.header-navbar_btn').on('click', function () {
-    $(this).toggleClass('header-navbar_btn--active');
-    $('.header-navbar_list').stop(true, true).fadeToggle(500);
+  $('.header-navbar__btn').on('click', function () {
+    $(this).toggleClass('header-navbar__btn--active');
+    $('.header-navbar__list').stop(true, true).fadeToggle(500);
   });
 
 });
