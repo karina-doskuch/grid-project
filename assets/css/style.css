@@ -556,7 +556,7 @@ a {
   right: 0;
 }
 
-.header-menu_container {
+.header-menu__container {
   display: grid;
   grid-template-columns: auto 1fr;
   -webkit-box-align: center;
