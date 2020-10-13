@@ -9,7 +9,7 @@
         @extend %container;
     }
 
-    &_container {
+    &__container {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(4, 1fr);
@@ -42,7 +42,7 @@
             height: 300px;
         }
 
-        &_image {
+        &__image {
             position: absolute;
             top: 0;
             right: 0;
@@ -53,14 +53,14 @@
             transition: transform 0.5s;
         }
 
-        &_title {
+        &__title {
             width: 100%;
             padding: 25px;
             color: #637588;
             font-weight: bold;
         }
 
-        &_text {
+        &__text {
             color: #637588;
             margin: 30px 20px 30px 20px;
         }

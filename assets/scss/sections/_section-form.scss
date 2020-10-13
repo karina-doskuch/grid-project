@@ -2,7 +2,7 @@
     background-color: #2D3651;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    padding: 25px;
+    padding: 30px;
 
     &-form {
         display: grid;
@@ -35,15 +35,15 @@
             grid-template-areas: "fb1""fb2""fb3";
         }
 
-        &_input {
+        &__input {
             display: block;
-            padding: 10px 15px;
+            padding: 10px 30px;
             font-size: 1.125rem;
             height: 60px;
-            transition: background-color 0.5s;
+            transition: background-color 0.5s, border-color 0.5s;
             letter-spacing: 0.15em;
-            background-color: #2D3651;
-            opacity: 0.8;
+            background-color: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255, 0);
             border-bottom: 2px solid rgba(255,255,255,0.25);
 
             &:nth-child(1)::placeholder {
@@ -51,7 +51,8 @@
             }
 
             &:hover {
-                background-color: rgba(255,255,255,0.25);
+                background-color: rgba(255,255,255,0.15);
+                border: 2px solid rgba(255,255,255,0.15);
                 border-bottom: 2px solid white;
             }
         }

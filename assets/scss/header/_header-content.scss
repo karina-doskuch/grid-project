@@ -1,7 +1,7 @@
 .header-content {
     position: relative;
 
-    &_title {
+    &__title {
         text-align: center;
         margin: 0 0 53px;
 
@@ -18,11 +18,11 @@
         }
     }
 
-    &_container {
+    &__container {
         @extend %container;
      }
 
-    &_buttons {
+    &__buttons {
         display: flex;
         justify-content: center;
 
@@ -37,7 +37,7 @@
     }
 }
 
-.header-content_buttons .btn {
+.header-content__buttons .btn {
     @media(max-width: 992px) {
         min-width: 200px;
         height: 50px;

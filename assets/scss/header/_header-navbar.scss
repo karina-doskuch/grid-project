@@ -1,4 +1,4 @@
-.header-menu_container {
+.header-menu__container {
    @media(max-width:768px) {
       background-color: rgba(68,89,110,0.4);
    }
@@ -11,7 +11,7 @@
       justify-content: right;
    }
 
-   &_btn {
+   &__btn {
       display: none;
       position: relative;
       width: 30px;
@@ -59,9 +59,10 @@
       }
    }
 
-   &_list {
+   &__list {
       list-style: none;
       padding: 0;
+      margin-right: -20px; 
       font-size: 1.125rem;
       display: grid;
       justify-content: end;
@@ -80,11 +81,11 @@
       }
    }
 
-   &_item {
+   &__item {
       padding: 20px;
    }
 
-   &_link {
+   &__link {
       transition: color 0.5s;
 
       &:hover {
