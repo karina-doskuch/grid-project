@@ -7,7 +7,7 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: #637588;
-    letter-spacing: 0.1em;
+    line-height: 1.15;
 }
 
 h1 {
@@ -47,8 +47,8 @@ a {
     
     &:hover,
     &:focus {
-    background-color: #d66926;
-  }
+      background-color: #d66926;
+    }
 }
 
 .btn {

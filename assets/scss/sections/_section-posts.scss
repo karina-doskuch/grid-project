@@ -33,8 +33,9 @@
     }
 
     &-item {
-        background-color: #EEEEEE;
-        text-align: center;
+        background-color: #f2f2f2;
+        transition: background-color 0.5s;
+       
 
         &_image__container {
             position: relative;
@@ -56,13 +57,24 @@
         &__title {
             width: 100%;
             padding: 25px;
-            color: #637588;
+            transition: color 0.5s;
+            text-align: center;
             font-weight: bold;
+            font-family: "Roboto Slab", serif;
+
+            &:hover {
+                color: #2d3651;
+            }
         }
 
         &__text {
-            color: #637588;
             margin: 30px 20px 30px 20px;
+            text-align: center;
+            transition: color 0.5s;
+
+            &:hover {
+                color: #2d3651;
+            }
         }
 
     }
@@ -78,7 +90,8 @@
     }
 
     &-item:hover {
-        background-color: lightgray;
+        background-color: #d8d8d8;
+        color: #2d3651;
     }
 }
 
