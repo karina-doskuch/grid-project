@@ -1,16 +1,19 @@
 .about {
     background-color: #E5E5E5;
-    padding: 100px 20px 100px;
+    padding: 100px 0;
     letter-spacing: 0.055em;
 
 
     @media (max-width: 992px) {
-        padding: 50px 20px 87px;
+        padding: 50px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 0;
     }
 
     @media (max-width: 576px) {
         background-color: #E5E5E5;
-        padding: 100px 50px 87px;
     
         &__container {
            grid-template-areas: "att att" "atx  atx" "aim aim";
@@ -26,6 +29,14 @@
         display: grid;
         grid-template-areas: "att att aim" "atx aln aim";
         grid-template-columns: 1fr 100px 271px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr 70px 271px;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-title {
@@ -34,12 +45,29 @@
         font-size: 2.5rem;
         color: #2d3651;
         margin-top: 0;
+
+        @media (max-width: 992px) {
+            font-size: 2rem;    
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 576px) {
+            text-align: center;
+        }
     }
 
     &-text {
         grid-area: atx;
         font-size: 1.125rem;
         line-height: 1.34em;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;   
+        }
+
     }
 
     &-line {
@@ -48,6 +76,10 @@
         height: 200px;
         width: 2px;
         margin: 1em 0 0 60px;
+
+        @media (max-width: 768px) {
+            margin: 1em 0 0 50px;   
+        }
     }
 
     &-image {

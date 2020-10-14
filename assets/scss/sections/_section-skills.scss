@@ -41,6 +41,10 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-width: 992px) {
+        min-height: 40vh;
+    }
+
     &__overlay {
         background-color: #2d3651;
         opacity: 0.8;

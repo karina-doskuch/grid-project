@@ -821,7 +821,7 @@ a {
 
 .about {
   background-color: #E5E5E5;
-  padding: 100px 20px 100px;
+  padding: 100px 0;
   letter-spacing: 0.055em;
 }
 
@@ -972,7 +972,7 @@ a {
 }
 
 .posts {
-  padding: 100px 10px;
+  padding: 100px 0;
 }
 
 .posts-header {
@@ -990,6 +990,11 @@ a {
 }
 
 .posts-item {
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f2f2f2;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
@@ -1020,10 +1025,13 @@ a {
 .posts-item__title {
   width: 100%;
   padding: 25px;
+  margin-top: 10px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
   text-align: center;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
   font-weight: bold;
   font-family: "Roboto Slab", serif;
 }
@@ -1033,7 +1041,7 @@ a {
 }
 
 .posts-item__text {
-  margin: 30px 20px 30px 20px;
+  margin: 0 20px 30px;
   text-align: center;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
@@ -1171,12 +1179,38 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
+  .skill-item {
+    min-height: 40vh;
+  }
   .about {
-    padding: 50px 20px 87px;
+    padding: 50px 0;
+  }
+  .about__container {
+    grid-template-columns: 1fr 70px 271px;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .subscribe {
+    padding: 20px 0;
+  }
+  .subscribe-form {
+    grid-gap: 23px;
+  }
+  .subscribe-form__input {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .posts {
+    padding: 80px 0;
+  }
+  .posts-header {
+    font-size: 2rem;
+    letter-spacing: 0.11em;
   }
   .posts__container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p6 p6";
+    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
   }
 }
 
@@ -1224,13 +1258,35 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
+  .about {
+    padding: 60px 0;
+  }
+  .about-title {
+    font-size: 1.5rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+  .about-line {
+    margin: 1em 0 0 50px;
+  }
   .subscribe-form {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "fb1 fb1" "fb2 fb3";
   }
+  .posts {
+    padding: 60px 0;
+  }
+  .posts-header {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
   .posts__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+  }
+  .footer-text:first-of-type {
+    margin-top: 10px;
   }
 }
 
@@ -1238,21 +1294,6 @@ a {
   .btn-accent {
     min-width: auto;
     width: 100%;
-  }
-  .header-content__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .header-content__buttons .btn:first-of-type {
-    margin-right: 0;
-  }
-  .header-content__buttons .btn:not(:last-of-type) {
-    margin-bottom: 20px;
   }
   .skills {
     padding: 20px;
@@ -1264,7 +1305,6 @@ a {
   }
   .about {
     background-color: #E5E5E5;
-    padding: 100px 50px 87px;
   }
   .about__container {
     grid-template-areas: "att att" "atx  atx" "aim aim";
@@ -1272,12 +1312,27 @@ a {
   .about-line {
     display: none;
   }
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+  .about-title {
+    text-align: center;
+  }
   .subscribe-form {
     grid-template-columns: 1fr;
     grid-template-areas: "fb1" "fb2" "fb3";
   }
+  .posts {
+    text-align: center;
+  }
   .posts__container {
     grid-template-columns: 1fr;
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+  }
+  .posts-item__title {
+    margin-top: 33px;
+  }
+  .footer-line {
+    margin-top: 10px;
   }
 }

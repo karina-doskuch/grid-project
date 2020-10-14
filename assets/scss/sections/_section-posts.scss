@@ -1,5 +1,17 @@
 .posts {
-    padding: 100px 10px;
+    padding: 100px 0;
+
+    @media (max-width: 992px) {
+        padding: 80px 0;
+     }
+
+     @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: 576px) {
+       text-align: center;
+    }
 
     &-header {
         margin-bottom: 50px;
@@ -7,6 +19,16 @@
         letter-spacing: 0.1em;
         color:#2d3651; 
         @extend %container;
+
+        @media(max-width:992px) {
+            font-size: 2rem;
+            letter-spacing: 0.11em;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
     }
 
     &__container {
@@ -18,7 +40,7 @@
 
         @media (max-width: 992px) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p6 p6";
+            grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
         }
         
         @media (max-width: 768px) {
@@ -33,9 +55,12 @@
     }
 
     &-item {
+        display: grid;
+        grid-template-rows: 300px 1fr;
+        align-items: center;
+
         background-color: #f2f2f2;
-        transition: background-color 0.5s;
-       
+        transition: background-color 0.5s;       
 
         &_image__container {
             position: relative;
@@ -57,18 +82,25 @@
         &__title {
             width: 100%;
             padding: 25px;
+            margin-top: 10px;
             transition: color 0.5s;
             text-align: center;
+            font-size: 1.125rem;
+            letter-spacing: 0.05em;
             font-weight: bold;
             font-family: "Roboto Slab", serif;
 
             &:hover {
                 color: #2d3651;
             }
+
+            @media (max-width: 576px) {
+                margin-top: 33px;
+            }
         }
 
         &__text {
-            margin: 30px 20px 30px 20px;
+            margin: 0 20px 30px;
             text-align: center;
             transition: color 0.5s;
 

@@ -13,7 +13,10 @@
         justify-content: center;
         padding: 20px 0 20px;
 
-    
+        @media (max-width: 576px) {
+            margin-top: 10px;
+        }
+
         &__element {
             background-color: rgba(255, 255, 255, 0.2);
             height: 1px;
@@ -24,6 +27,12 @@
     &-text {
         margin-right: -0.5em;
         letter-spacing: 0.33em;
+
+        &:first-of-type {
+            @media (max-width:768px) {
+                margin-top: 10px;
+            }
+        }
     
     
         &:last-of-type {
