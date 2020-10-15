@@ -1,8 +1,8 @@
 .footer {
-    padding: 50px 20px 70px;
-    background-color: #2d3651;
-    text-align: center;
     display: block;
+    padding: 50px $gap 70px;
+    text-align: center;
+    background-color: $color-primary;
 
     &__container {
         @extend %container;
@@ -10,62 +10,58 @@
 
     &-line {
         display: flex;
+        padding: $gap 0 $gap;
         justify-content: center;
-        padding: 20px 0 20px;
 
-        @media (max-width: 576px) {
+        @include sm {
             margin-top: 10px;
         }
 
         &__element {
-            background-color: rgba(255, 255, 255, 0.2);
+            width: 75px;
             height: 1px;
-            width: 75px;    
+            background-color: rgba(255, 255, 255, 0.2);
         }
     }
-    
+
     &-text {
         margin-right: -0.5em;
         letter-spacing: 0.33em;
 
         &:first-of-type {
-            @media (max-width:768px) {
+            @include md {
                 margin-top: 10px;
             }
         }
-    
-    
+
+
         &:last-of-type {
-            color:#e5e5e5;
             font-weight: 700;
             letter-spacing: 0.05em;
+            color: $color-gray-light;
         }
     }
-    
+
     &-icon {
         display: grid;
+        text-align: center;
         align-items: center;
         justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-        text-align: center;
-    
+
         .fab {
             font-size: 2.25rem;
         }
-    
+
         a {
-            color: #ffffff;
-            font-size: 20px;
+            font-size: $gap;
             padding: 5px;
-            transition: all .5s ease;
+            transition: all 0.5s ease;
+            color: $color-light;
         }
-    
+
         a:hover {
-          color: #d66926;
+            color: $color-accent;
         }
     }
 }
-
-
-
-

@@ -4,35 +4,38 @@
 
 html {
     overflow-y: scroll;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    color: #637588;
+    font-family: $font-main;
+    font-size: $font-size;
+    color: $color-gray;
     line-height: 1.15;
 }
 
 h1 {
-    font-family: "Roboto Slab", serif;
-    font-size: 3.75rem;
+    font-family: $font-header;
     font-weight: 300;
     line-height: 1.2em;
     letter-spacing: 0.08em;
 
-    @media (max-width: 992px) {
-      font-size: 2.5rem;
+    @include lg-min {
+        font-size: 3.75rem;
     }
 
-    @media (max-width: 768px) {
-      font-size: 1.875rem;
+    @include lg-md {
+        font-size: 2.5rem;
+    }
+
+    @include md {
+        font-size: 1.875rem;
     }
 }
 
 h3 {
-  letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
 }
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 
 .btn,
@@ -44,26 +47,29 @@ a {
     text-align: center;
     transition: background-color 0.5s;
     letter-spacing: 0.1em;
-    
+
     &:hover,
     &:focus {
-      background-color: #d66926;
+        background-color: $color-accent;
     }
 }
 
 .btn {
     min-width: 250px;
-    border: 2px solid #ffffff;
-    background-color: rgba(#ffffff, 0.1);
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, 0.1);
+    height: 60px;
+    padding: 18px $gap;
 }
 
 .btn-accent {
-    background-color:rgba(#2d3651, 0.8);
-    border: 2px solid #2d3651;
+    background-color: rgba($color-primary, 0.8);
+    border: 2px solid $color-primary;
     min-width: 350px;
+    font-size: 1.125rem;
 
-    @media (max-width: 576px) {
-      min-width: auto;
-      width: 100%;
+    @include sm {
+        min-width: auto;
+        width: 100%;
     }
 }

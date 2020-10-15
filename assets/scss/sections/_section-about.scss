@@ -1,22 +1,21 @@
 .about {
-    background-color: #E5E5E5;
     padding: 100px 0;
-    letter-spacing: 0.055em;
+    letter-spacing: .055em;
+    background-color: $color-gray-light;
 
-
-    @media (max-width: 992px) {
+    @include lg {
         padding: 50px 0;
     }
 
-    @media (max-width: 768px) {
+    @include md {
         padding: 60px 0;
     }
 
-    @media (max-width: 576px) {
-        background-color: #E5E5E5;
-    
+    @include sm {
+        background-color: $color-gray-light;
+
         &__container {
-           grid-template-areas: "att att" "atx  atx" "aim aim";
+            grid-template-areas: 'att att''atx  atx''aim aim';
         }
 
         &-line {
@@ -25,66 +24,66 @@
     }
 
     &__container {
-        @extend %container;
         display: grid;
-        grid-template-areas: "att att aim" "atx aln aim";
+
+        @extend %container;
+        grid-template-areas: 'att att aim''atx aln aim';
         grid-template-columns: 1fr 100px 271px;
 
-        @media (max-width: 992px) {
+        @include lg {
             grid-template-columns: 1fr 70px 271px;
         }
 
-        @media (max-width: 576px) {
+        @include sm {
             grid-template-columns: 1fr;
         }
     }
 
     &-title {
-        grid-area: att;
-        font-family: "Roboto Slab", serif;
+        font-family: 'Roboto Slab', serif;
         font-size: 2.5rem;
-        color: #2d3651;
         margin-top: 0;
+        color: $color-primary;
+        grid-area: att;
 
-        @media (max-width: 992px) {
-            font-size: 2rem;    
+        @include lg {
+            font-size: 2rem;
         }
 
-        @media (max-width: 768px) {
+        @include md {
             font-size: 1.5rem;
         }
 
-        @media (max-width: 576px) {
+        @include sm {
             text-align: center;
         }
     }
 
     &-text {
-        grid-area: atx;
         font-size: 1.125rem;
         line-height: 1.34em;
+        grid-area: atx;
 
-        @media (max-width: 768px) {
-            font-size: 1rem;   
+        @include md {
+            font-size: 1rem;
         }
-
     }
 
     &-line {
-        grid-area: aln;
-        background-color: rgba(#637588, 0.1);
-        height: 200px;
         width: 2px;
+        height: 200px;
         margin: 1em 0 0 60px;
+        background-color: rgba($color-gray, .1);
+        grid-area: aln;
 
-        @media (max-width: 768px) {
-            margin: 1em 0 0 50px;   
+        @include md {
+            margin: 1em 0 0 50px;
         }
     }
 
     &-image {
-        grid-area: aim;
         display: flex;
+        grid-area: aim;
         justify-content: center;
 
         img {
@@ -92,7 +91,4 @@
             height: 488px;
         }
     }
-    
 }
-
-

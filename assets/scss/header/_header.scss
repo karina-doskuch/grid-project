@@ -1,15 +1,12 @@
 .header {
-    background-color: #2d3651;
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    padding: 100px 0;
+    color: $color-light;
+    background-color: $color-primary;
     background-image: url(../img/img-header.png);
     background-position: 50% 50%;
     background-size: cover;
-    min-height: 100vh;
-    position: relative;
-    color: #ffffff;
-    padding: 100px 0;
-    display: grid;
     align-items: center;
 }
-
-
-
