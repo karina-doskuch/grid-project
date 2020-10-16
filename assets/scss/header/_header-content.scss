@@ -23,12 +23,10 @@
 
     &__buttons {
         display: flex;
-
         justify-content: center;
 
         @include sm {
             flex-direction: column;
-
             align-items: center;
         }
 

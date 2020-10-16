@@ -575,7 +575,7 @@ a {
 
 .header-logo {
   font-size: 1.5rem;
-  letter-spacing: .22em;
+  letter-spacing: 0.22em;
 }
 
 .header-logo__link {
@@ -823,7 +823,7 @@ a {
 
 .about {
   padding: 100px 0;
-  letter-spacing: .055em;
+  letter-spacing: 0.055em;
   background-color: #e5e5e5;
 }
 
@@ -834,7 +834,7 @@ a {
 }
 
 .about-title {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   margin-top: 0;
   color: #2d3651;
