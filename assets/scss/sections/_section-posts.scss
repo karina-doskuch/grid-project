@@ -13,7 +13,7 @@
         text-align: center;
     }
 
-    &-header {
+    &__header {
         font-size: 2.5rem;
         margin-bottom: 50px;
         letter-spacing: 0.1em;
@@ -31,7 +31,7 @@
         }
     }
 
-    &-container {
+    &__container {
         display: grid;
         grid-gap: $gap;
         grid-template-columns: repeat(4, 1fr);

@@ -48,7 +48,7 @@
 .skill-item {
     position: relative;
     overflow: hidden;
-    min-height: calc(33.333vh - 13.33px);
+    min-height: calc(230px - 20px * 0.66);
     background-color: $color-primary;
 
     @include lg {

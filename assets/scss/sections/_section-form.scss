@@ -1,7 +1,7 @@
 .subscribe {
     font-family: $font-header;
     font-size: $gap;
-    padding: 30px;
+    padding: 30px 0;
     background-color: $color-primary;
 
     @include lg {
@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "fb1 fb2 fb3";
-        grid-gap: 10px;
+        grid-gap: 20px;
         justify-content: center;
         align-items: center;
         height: 100%;
