@@ -27,15 +27,14 @@
     &__text {
         margin-right: -0.5em;
         letter-spacing: 0.33em;
+        margin-top: 20px;
 
-        &:first-of-type {
-            @include md {
-                margin-top: 10px;
-            }
+        @include sm {
+            margin-top: 10px;
         }
 
-
         &:last-of-type {
+            margin-top: 0;
             font-weight: 700;
             letter-spacing: 0.05em;
             color: $color-gray-light;

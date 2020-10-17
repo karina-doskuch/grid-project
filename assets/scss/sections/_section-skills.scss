@@ -48,10 +48,14 @@
 .skill-item {
     position: relative;
     overflow: hidden;
-    min-height: calc(230px - 20px * 0.66);
+    min-height: 350px;
     background-color: $color-primary;
 
-    @include lg {
+    @include md {
+        min-height: calc(33vh - 20px * 0.66);
+    }
+
+    @include sm {
         min-height: 40vh;
     }
 
@@ -98,6 +102,11 @@
         letter-spacing: 0.1em;
         justify-content: center;
         align-items: center;
+
+        @include md {
+            font-size: 1.125rem;
+        }
+
     }
 
     &:hover .skill-item__overlay {
