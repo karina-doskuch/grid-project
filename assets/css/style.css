@@ -712,7 +712,7 @@ a {
 .skill-item {
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+  min-height: calc(33.33vh - 20px * 0.66);
   background-color: #2d3651;
 }
 
@@ -1279,9 +1279,6 @@ a {
   .header-content__title {
     margin: 0 0 33px;
   }
-  .skill-item {
-    min-height: 40vh;
-  }
   .skill-item__link {
     font-size: 1.125rem;
   }
@@ -1337,12 +1334,24 @@ a {
     min-width: auto;
     width: 100%;
   }
+  .header-content__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .header-content__buttons .btn {
     font-size: 1rem;
     min-width: 170px;
     height: 40px;
     padding: 9px 20px;
     letter-spacing: 0.05em;
+  }
+  .header-content__buttons .btn:first-of-type {
+    margin-right: 0;
   }
   .skills {
     padding: 20px;
@@ -1381,5 +1390,11 @@ a {
   }
   .footer__text {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 575.8px) and (max-width: 575.8px) {
+  .header-content__buttons .btn:not(:last-of-type) {
+    margin-bottom: 20px;
   }
 }

@@ -25,11 +25,10 @@
         display: flex;
         justify-content: center;
 
-        // If we want buttons in one column on small resolution
-        // @include sm {
-            // flex-direction: column;
-            // align-items: center;
-        // }
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .btn:first-of-type {
             margin-right: $gap;
@@ -61,16 +60,15 @@
         letter-spacing: 0.05em;
     }
 
-    // If we want buttons in one column on small resolution
-    // @include sm {
-        // &:first-of-type {
-            // margin-right: 0;
-        // }
+    @include sm {
+        &:first-of-type {
+            margin-right: 0;
+        }
 
-        // &:not(:last-of-type) {
-            // @include sm {
-                // margin-bottom: $gap;
-            // }
-        // }
-    // }
+        &:not(:last-of-type) {
+            @include sm {
+                margin-bottom: $gap;
+            }
+        }
+    }
 }

@@ -48,12 +48,8 @@
 .skill-item {
     position: relative;
     overflow: hidden;
-    min-height: 350px;
+    min-height: calc(33.33vh - 20px * 0.66);
     background-color: $color-primary;
-
-    @include md {
-        min-height: 40vh;
-    }
 
     &__overlay {
         position: absolute;
