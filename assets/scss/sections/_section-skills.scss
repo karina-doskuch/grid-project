@@ -52,10 +52,6 @@
     background-color: $color-primary;
 
     @include md {
-        min-height: calc(33vh - 20px * 0.66);
-    }
-
-    @include sm {
         min-height: 40vh;
     }
 

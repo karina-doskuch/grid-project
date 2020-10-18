@@ -1280,7 +1280,7 @@ a {
     margin: 0 0 33px;
   }
   .skill-item {
-    min-height: calc(33vh - 20px * 0.66);
+    min-height: 40vh;
   }
   .skill-item__link {
     font-size: 1.125rem;
@@ -1351,9 +1351,6 @@ a {
     grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-gap: 20px;
-  }
-  .skill-item {
-    min-height: 40vh;
   }
   .about__container {
     grid-template-areas: "att" "atx" "aim";
