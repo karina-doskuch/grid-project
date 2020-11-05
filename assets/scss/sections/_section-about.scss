@@ -15,17 +15,37 @@
         display: grid;
 
         @extend %container;
-        grid-template-areas: "att aim" "atx aim";
-
-        grid-template-columns: 1fr 271px;
-
+        @include lg-min {
+           grid-gap: 100px; 
+           grid-template-columns: 1fr 271px;
+        }
+        @include lg-md {
+            grid-gap: 40px;
+            grid-template-columns: 1fr 271px;
+        }
+        @include md-sm {
+            grid-gap: 20px;
+            grid-template-columns: 1fr 236px;
+        }
         @include sm {
-            grid-template-areas: "att" "atx" "aim";
+            grid-gap: 20px;
             grid-template-columns: 1fr;
         }
-    }
+        // grid-template-areas: "att aim" "atx aim";
+
+
+        // @include sm {
+        //     grid-template-areas: "att" "atx" "aim";
+        //     grid-template-columns: 1fr;
+        // }
+    // }
 
     &__title {
+        p {
+            @include lg-min {
+                font-size: 1.125rem;
+            }
+        }
         font-family: $font-main;
         font-size: 2.5rem;
         letter-spacing: 0.12em;
@@ -56,13 +76,19 @@
         position: relative;
         margin-right: $gap * 5 - 10px;
 
-        @include lg {
-            margin-right: 45px;
+        @include lg-min {
+           right: 45px;
+        }
+        @include lg-md {
+            right: -20px;
         }
 
-        @include md {
+        @include md-sm {
             font-size: 1rem;
             margin-right: $gap * 2 - 5px;
+        }
+        @include sm {
+            display: none;
         }
 
         &::after {
@@ -93,9 +119,11 @@
     }
 
     &__image {
-        display: flex;
+        display: grid;
         grid-area: aim;
-        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        
 
         img {
             width: 271px;
