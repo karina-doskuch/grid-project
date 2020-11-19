@@ -712,7 +712,6 @@ a {
 .skill-item {
   position: relative;
   overflow: hidden;
-  min-height: calc(33.33vh - 20px * 0.66);
   background-color: #2d3651;
 }
 
@@ -843,7 +842,6 @@ a {
   letter-spacing: 0.12em;
   margin-top: 0;
   color: #2d3651;
-  grid-area: att;
 }
 
 .about__text {
@@ -1173,6 +1171,12 @@ a {
   color: #d66926;
 }
 
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
+}
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -1192,7 +1196,7 @@ a {
 
 @media (max-width: 991.8px) {
   .about {
-    padding: 50px 0;
+    padding: 80px 0;
   }
   .about__title {
     font-size: 2rem;
@@ -1200,6 +1204,7 @@ a {
   }
   .about__text {
     margin-right: 45px;
+    font-size: 1rem;
   }
   .subscribe {
     padding: 20px 0;
@@ -1290,10 +1295,6 @@ a {
     letter-spacing: 0.14em;
     margin-bottom: 12px;
   }
-  .about__text {
-    font-size: 1rem;
-    margin-right: 35px;
-  }
   .subscribe-form {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "fb1 fb1" "fb2 fb3";
@@ -1326,6 +1327,12 @@ a {
   }
   .about__text::after {
     right: -15px;
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 
